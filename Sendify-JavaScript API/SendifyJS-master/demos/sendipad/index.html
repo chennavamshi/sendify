@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <title>Sendifypad - Web XMPP</title>
+
+    <link rel='stylesheet' href='css/jquery-ui.css'>
+    <script src='js/strophe.js'></script>
+    <script src='js/jquery.min.js'></script>
+    <script src='js/jquery-ui.min.js'></script>
+    <link rel='stylesheet' href='css/style.css'>
+    <link rel='stylesheet' href='css/bootstrap-partial.css'>
+    <script src='js/sendify.js'></script>
+    <script src='js/script.js'></script>
+  </head>
+  <header>
+    <h1 style="padding-top:20px">Sendifypad (web)</h1>
+  </header>
+  <body>
+    <!-- The status bar -->
+    
+    <center><div id='status'></div></center>
+    <div class="main">
+    <!-- The drawing tools.  The ids are the button values. -->
+    <div class="tools">
+        <div class='button disabled color' id='color-fff'></div>
+        <div class='button disabled color' id='color-f00'></div>
+        <div class='button disabled color' id='color-0f0'></div>
+        <div class='button disabled color' id='color-00f'></div>
+        <div class='button disabled linew' id='width-2'><div></div></div>
+        <div class='button disabled linew' id='width-4'><div></div></div>
+    </div>
+    <div class="pad">
+        <!-- The drawing area -->
+        <canvas id='sketch' class='disabled' width='600'
+                height='450'></canvas>
+    </div>
+        <div class="buts">
+        <button id='erase' class="btn btn-primary" 
+               disabled>Erase</button><br><br>
+        <button id='disconnect' class="btn btn-danger"
+               disabled>Disconnect</button><br><br>
+        <div class='clear'></div>
+        </div>
+    </div>
+        <!-- The login dialog -->
+        <div id='login_dialog' class='hidden'>
+          <label>JID:</label><br><input type='text' id='jid'>
+          <label>Password:</label><input type='password' id='password'>
+          <label>Pubsub service:</label><input type='text' id='service'>
+          <label>Pubsub node:</label><input type='text' id='node'>
+        </div>
+   
+        <!-- The error dialog -->
+        <div id='error_dialog' class='hidden'>
+          <p></p>
+        </div>
+  </body>
+</html>
